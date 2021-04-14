@@ -1,0 +1,1609 @@
+* {margin: 0; padding: 0; box-sizing: border-box;};
+
+:root {
+  --beige-color: #EDECE8;
+  --copper-color: #ab7440;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ab7440
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.product,
+.proces,
+.wizualizacje,
+.wycena,
+.kontakt,
+.faq {
+  background-color: rgb(245, 245, 245);
+  color: black;
+}
+
+h1 {font-weight: 700; font-size: 1.7em;}
+h2 {font-size: 1.4em;}
+h2::after {display: block; position: relative; width: 70vw; height: 3px; background-color: #ab7440; content: ''; margin: 5px 0px 0px -10px;}
+h3 {font-size: 1.05em; line-height: 1.3em}
+h4 {font-size: 0.9em}
+h5 {font-size: 0.85em; font-weight: 300; line-height: 1.3em}
+h6 {font-size: 0.7em; font-weight: 400;}
+
+a {text-decoration: none; color: inherit}
+a:hover { color: #ad8257; transition: all 0.2s ease-in-out}
+
+/* ---------------- */
+/* -- ANIMATIONS -- */
+/* ---------------- */
+
+.slide-in-top{-webkit-animation:slide-in-top 1s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-top 1s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+.slide-in-left{-webkit-animation:slide-in-left 1s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-left 1s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+
+.slide-in-bottom{-webkit-animation:slide-in-bottom 1s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom 1s cubic-bezier(.25,.46,.45,.94) .5s both}
+
+@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+.slide-in-right{-webkit-animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both}
+
+ @-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+
+
+/* ---------------- */
+/* PHONE NAVIGATION */
+/* ---------------- */
+
+.product nav #spanbox span, 
+.proces nav #spanbox span,
+.wizualizacje nav #spanbox span,
+.wycena nav #spanbox span,
+.kontakt nav #spanbox span,
+.faq nav #spanbox span {
+  background-color: black;
+  box-shadow: 0.5px 0.5px 0.5px rgb(255, 255, 255)
+}
+.product header > h1,
+.proces header > h1,
+.wizualizacje header > h1,
+.wycena header > h1,
+.kontakt header > h1,
+.faq header > h1 {
+  padding: 25px 20px;
+  color: black;
+}
+
+header > h1 > a {
+  text-transform: uppercase;
+}
+
+header > h1 > a:hover {
+  color: #ab7440;
+  transition: all 0.2s ease-in-out;
+}
+
+.product #spanbox,
+.proces #spanbox,
+.wizualizacje #spanbox,
+.wycena #spanbox,
+.kontakt #spanbox,
+.faq #spanbox { top: 25px; right: 25px;}
+
+#menuToggle input:hover ~ #spanbox span {
+  background-color: #ab7440;
+  transition: all 0.1s ease-in-out;
+}
+
+header {position: fixed; width: 100%; z-index: 5};
+
+header > h1 {position: fixed; display: block; padding: 25px 15px; text-shadow: 0.5px 0.5px 0.5px rgb(110, 110, 110); border-bottom: 0.1px solid rgba(255, 255, 255, 0.164);}  
+
+#menuToggle {
+  text-align: right;
+}
+
+#menuToggle input {
+  position: fixed;
+  right: 25px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  z-index: 1001;
+}
+
+#spanbox {
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 25px;
+  z-index: 1000;
+}
+
+#menuToggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 0.5px rgb(110, 110, 110);
+}
+
+#menu {
+  background-color: #EDECE8;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  transform: translateX(-100vw);
+  padding: 50px 10px;
+  border-right: 0.1px solid rgb(214, 214, 214);
+  z-index: 999;
+  text-align: left;
+}
+
+#menu a  {
+  text-decoration: none;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.808);
+  text-align: left;
+  font-size: 40px;
+  display: block;
+}
+
+#menu a li {
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+#menu a:nth-last-child(-n+3) {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+#menu a li img {
+  height: 40px;
+}
+
+#menu div:nth-of-type(2) {
+  display: none;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: translateX(0);
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+}
+
+#menuToggle input:checked ~ #spanbox > span:nth-child(1) {
+  transform: rotate(-45deg) translate(-1px, 0px);
+  background-color: black;
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+  transition-delay: 0.5s;
+}
+#menuToggle input:checked ~ #spanbox > span:nth-child(3) {
+  transform: rotate(45deg) translate(-9px, -10px);
+  background-color: black;
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+}
+
+#menuToggle input:checked ~ #spanbox > span:nth-child(2) {
+  opacity: 0;
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04)
+}
+
+#menuToggle input:active ~ ul {
+  transform: translateX(-100vw);
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+}
+
+#menuToggle input:active ~ #spanbox > span:nth-child(1),
+#menuToggle input:active ~ #spanbox > span:nth-child(3){
+  transform: rotate(0) translate(0);
+  background-color: white;
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+}
+
+#menuToggle input:active ~ #spanbox > span:nth-child(2) {
+  opacity: 1;
+  transition: transform 0.7s cubic-bezier(.2,1,1,1.04)
+}
+
+.color {
+  background-color: rgba(235, 235, 235, 0.74);
+}
+
+.colorBlack {
+  background-color: rgba(0, 0, 0, 0.651);
+}
+
+.colorBlack h1 {
+  color:white !important;
+}
+
+.socialMediaDesktop { 
+  display: none;
+}
+
+/* ----------------------------- INDEX ------------------------------ */
+
+.index .desktop {
+  display: none;
+}
+
+.index {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/img/tyt2.jpg); 
+  background-size: 110vh;
+  background-position-x: center;
+  max-width: 100vw;
+}
+
+.index header {
+  left: 15px;
+  top: 25px;
+}
+
+.index footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  z-index: -1;
+  background-color: transparent;
+  padding: 0;
+}
+
+.index footer div {
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.index footer div:hover {
+  background-color: rgba(255, 255, 255, 0.226);
+}
+
+.index footer div p {
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.397);
+}
+
+.index main {
+  z-index: -1;
+  overflow: hidden;
+}
+
+.index main p {
+  display: block;
+  position: relative;
+  transform: translateY(45vw);
+  width: 80vw;
+  line-height: 1.5rem;
+  margin-left: 10px;
+  border: 0.1px solid #ab7440;
+  padding: 10px;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.397);
+}
+
+/* ----------------------------- PRODUCT ------------------------------ */
+
+.meetTheProductPhone {
+  display: none;
+}
+
+.single .meetTheProduct .imgbox img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+}
+
+.single .meetTheProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.single article h2,
+.meetTheProduct a {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.product main {
+  padding-top: 90px;
+}
+
+.product article {
+  padding-bottom: 30px;
+}
+
+.product article h2 {
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding: 0px 10px 0px 0px;
+}
+
+/* Button wróć */
+body > main > article > section:nth-child(1) > div > a > h6 {
+  margin-left: 10px;
+  border: 2px solid black !important;
+}
+
+.product article h3 {
+  font-weight: 300;
+  padding: 0px 10px 10px 10px;
+  margin-bottom: 15px;
+}
+
+.office .imgbox,
+.home .imgbox,
+.resto .imgbox {
+  margin-bottom: 30px;
+  overflow-x: auto;
+  display: flex;
+  height: 45vh;
+}
+
+.imgbox__img {
+  position: relative;
+  z-index: 3;
+  margin-bottom: 180px;
+  border: 1px solid #ab744073;
+}
+
+.imgbox__img img {
+  width: 100vw;
+  height: 200px;
+  object-fit: cover; 
+  filter: brightness(0.9);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.582);
+  z-index: 2;
+  display: block;
+}
+
+.imgbox__img #description {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background-color: rgb(250, 250, 250);
+  box-shadow: 1px 1px 10px rgb(151, 151, 151);
+  font-size: 1.05em;
+  height: auto;
+  width: 80%;
+  padding: 15px;
+  text-align: center;
+}
+
+.imgbox__img #description h4 {
+  color: #ab7440;
+  margin-bottom: 5px;
+}
+
+.imgbox__img #description h6 {
+  text-decoration: underline;
+  margin-top: 15px;
+}
+
+.productsDownload {
+  background-color: #f3f3f3
+}
+  
+  body > main > article.productsDownload > section > div:nth-child(2) {
+    display: none;
+  }
+
+/* ----------------------------- WIZUALIZACJE ------------------------------ */
+
+.visualizationGalleryPhone #containerBig #containerImg img{
+  width: 100vw;
+  scroll-snap-align: start;
+  animation: 1.5s imgBumpLeft;
+  animation-iteration-count: 2;
+  animation-delay: 1s;
+  height: 300px !important;
+}
+
+#containerImg {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+@keyframes imgBumpLeft {
+  80% {transform: translateX(-20px)}
+  100% {transform: translateX(0px)};
+}
+
+.wizualizacje main { padding-top: 90px; }
+
+.visualizationGallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.visualizationGallery h2 { margin-bottom: 15px; padding-left: 10px;}
+
+.visualizationGallery div {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.visualizationGallery #description,
+.visualizationGalleryPhone #description {
+  width: 80%;
+  margin: auto;
+  padding: 20px 5px;
+  text-align: center;
+  background-color:rgb(243, 243, 243);
+  box-shadow: 1px 1px 7px #ab7740;
+  transform: translateY(-20px);
+}
+
+.visualizationGallery div img {
+  width: 100%;
+  margin-bottom: 5px;
+  height: 190px;
+  object-fit: cover;
+}
+
+
+.visualizationGallery div h4,
+.visualizationGallery div h5 {
+  margin-bottom: 5px;
+}
+
+.visualizationGallery div h6 {
+  text-decoration: underline;
+}
+
+.visualizationGallery {
+  display: none;
+}
+
+.doYouWantMore {
+  margin: 30px 0;
+  background-color: #f3f3f3;
+}
+
+.doYouWantMore h3 {
+  color: #ab7440;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doYouWantMore h6 {
+  text-align: center;
+}
+
+.doYouWantMore p {
+  display: block;
+  width: 99%;
+  text-align: center;
+  border: 0.5px solid black;
+  margin: 15px auto;
+  padding: 7px 0;
+}
+
+/* ----------------------------- PROCES ------------------------------ */
+
+.productionProcess h2 {
+  color: black;
+  padding: 90px 0 15px 10px;
+  width: 80%;
+}
+
+.productionProcess section:last-of-type {
+  padding-bottom: 150px
+}
+
+.productionProcess section:nth-of-type(1) {
+  padding-top: 10px;
+}
+
+.proces section {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  height: 300px;
+  margin: 50px 0;
+}
+
+.proces section:nth-of-type(1) {
+  margin-top: 10px;
+} 
+
+.proces section img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+} 
+
+.proces section .divbox {
+  color: black;
+  background-color: #e7dacd;
+  display: flex;
+  align-items: center;
+}
+
+.proces section .divbox > div {
+  background-color: white;
+  padding: 15px;
+  position: relative;
+  right: 15px;
+  box-shadow: 0.5px 1px 5px #ab7440;
+}
+
+.proces section div h4,
+.proces section div h5 {
+  margin-bottom: 10px;
+}
+
+.proces section div h6 {
+  line-height: 1.2em;
+  font-size: 0.9em;
+}
+
+.goToPrice {
+  border-left: 5px solid #ad8257;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.goToPrice section {
+  display: block;
+  height: 0;
+}
+
+.goToPrice section h1,
+.goToPrice section h5{
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+/* ----------------------------- WYCENA ------------------------------ */
+
+.wycena main {
+  padding-top: 90px;
+}
+
+.wycena form div {
+  margin: 0;
+  padding: 0;
+}
+
+.wycena main h3 {
+  text-align: center;
+}
+
+.wycena main h2 {
+  font-size: 1.7em;
+  margin-bottom: 40px;
+}
+
+.wycena main h2,
+.wycena main h5 {
+  padding-left: 10px;
+}
+
+.wycena main h5 {
+  margin: 15px 0;
+  padding-right: 10px;
+  line-height: 1.4em;
+}
+
+.links {
+  margin: 30px 0;
+  padding: 30px 0;
+}
+
+.wycena .links h1 {
+  border-left: 4px solid #ad8257;
+  padding-left: 10px;
+}
+
+.wycena .links h5 {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.wycena .links img {
+  width: 100vw;
+  margin: 15px 0;
+  height: 120px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.wycena .links span {
+  display: inline-block;
+  border-bottom: 2px dotted #ad8257;
+  width: auto;
+}
+
+.wycena form,
+.wycena #result-text,
+.wycena #result {
+  padding-left: 10px;
+}
+
+
+.wycena .box {
+  padding: 30px 0;
+  margin: 20px 0;
+  width: 100%;
+  
+}
+
+.wycena .box span {
+width: 3%;
+padding: 0px;
+height: 30px;
+background-color: black;
+content: " ";
+margin: 0 2px;
+}
+
+.wycena form div {
+display: flex;
+align-items: center;
+flex-wrap: nowrap;
+justify-content: center;
+margin-left: -10px;
+}
+
+
+.wycena #result-text,
+.wycena #result {
+  margin: 20px 0;
+}
+
+.wycena .range::-webkit-slider-thumb {
+  height: 25px;
+  width: 25px;
+  appearance: none;
+  background-color: #ab7740;
+}
+
+
+.wycena .range {
+  width: 80%;
+  margin: auto;
+  display: inline-block;
+  appearance: none;
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+
+
+/* ----------------------------- KONTAKT ------------------------------ */
+
+.kontakt main { padding-top: 90px; }
+
+.kontakt section:nth-of-type(2),
+.kontakt section:nth-of-type(3) { margin-top: 50px;}
+
+.kontakt h2 { padding-left: 10px; margin-bottom: 30px;}
+
+.kontakt main div { display: flex; align-items: center; padding: 0 5px;}
+
+.kontakt main div img {display: block; width: 40%; margin-right: 10px; box-shadow: 1px 1px 3px gray;}
+
+.kontakt main div h4 {font-weight: 300;}
+
+.kontakt main div h4 span {margin-bottom: 5px; display: block;}
+
+.kontakt section:nth-of-type(1) input,
+.kontakt section:nth-of-type(1) textarea {
+  width: calc(100vw - 10px);
+  display: block;
+  margin: 10px 5px;
+  text-align: center;
+  padding: 10px;
+  font-family: inherit;
+  border: 1px solid #ad825794;
+  background-color: rgb(252, 252, 252);
+}
+
+.kontakt input::placeholder,
+.kontakt textarea::placeholder {
+  color: black;
+}
+
+.kontakt textarea {
+  height: 100px;
+}
+
+input[type=submit] {
+  display: block;
+  height: auto;
+  width: 30% !important;
+  background-color: #a87e54 !important;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+  left: 50%;
+  position: relative;
+  transform: translateX(calc(-50% - 10px));
+}
+
+
+.kontakt .socialmedia h3 {
+  display: block;
+  border-left: 3px solid  #ad8257;
+  padding-left: 10px;
+}
+
+.kontakt .socialmedia img {
+  display: inline-block;
+  height: 30px;
+  width: auto;
+  margin: 20px 20px;
+}
+
+/* ----------------------------- FAQ ------------------------------ */
+
+.faq main {padding-top: 90px}
+
+.faq main h2 {
+  padding-left: 10px; 
+  margin-bottom: 20px;
+}
+
+
+.faq > main > article > h2::after {
+  opacity: 0;
+}
+
+.faq main article section {
+  position: relative;
+}
+
+.faq main article h3 {
+  padding: 0 10px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.faq main article section h3 {
+  display: inline-block;
+  line-height: 40px;
+  border-left: 3px solid #ad8257;
+  width: calc(100vw - 20px);
+  margin: auto;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.faq main input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  opacity: 0;
+}
+
+.faq main input:hover ~ h3 {
+  color: #ad8257;
+}
+
+.faq main input:checked ~ h3 {
+  color: #ad8257;
+}
+
+.faq main article section p {
+  display: none;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+.faq main input:checked ~ p {
+  display: block;
+  margin: 15px 0;
+}
+
+footer {
+  background-color:black;
+  margin-top: 50px;
+  padding: 20px 10px;
+  color: white;
+}
+
+footer nav {
+  display: grid;
+  grid-template: auto / repeat(2,1fr);
+}
+
+.index footer nav {
+  display: block;
+}
+
+footer div {
+  width: 100%;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+} 
+
+/* ------------------------------------ */
+/* --------MEDIA QUERIES--------------- */
+/* ------------------------------------ */
+
+@media (min-width: 1000px) {
+
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .product header > h1, .proces header > h1, .wizualizacje header > h1, .wycena header > h1, .kontakt header > h1, .faq header > h1 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h2::after {
+    display: none;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  h5 {font-size: 1em}
+
+  h6 {font-size: 0.9em}
+
+  #spanbox {
+    top: 30px;
+    right: 25px;
+  }
+
+  #menuToggle span {
+    width: 40px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+    box-shadow: 1px 1px 4px black;
+  }
+
+  .product #spanbox, .proces #spanbox, .wizualizacje #spanbox, .wycena #spanbox, .kontakt #spanbox, .faq #spanbox {
+    top: 35px;
+  }
+
+  .product nav #spanbox span, .proces nav #spanbox span, .wizualizacje nav #spanbox span, .wycena nav #spanbox span, .kontakt nav #spanbox span, .faq nav #spanbox span {
+    height: 1px;
+  }
+
+  #menu a {
+    font-size: 50px;
+  }
+
+  #menu a li {
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: right;
+  }
+
+  #menu a li:hover {
+    color: rgb(116, 116, 116);
+    transition: color 0.1s ease-in-out;
+  }
+
+  #menu a:nth-last-child(-n+3) {
+    display: none;
+  }
+
+  #menu {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    column-gap: 50px;
+    border: none;
+    overflow: hidden;
+  }
+
+  #menu .menuFlex {
+    display: flex;
+    align-items: center;
+  }
+
+  #menu > div.menuFlex > div {
+    width: 100%;
+  }
+
+  #menu div:nth-of-type(2) {
+    display: flex;
+    overflow: hidden;
+  }
+
+  #menu div:nth-of-type(2) img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #menuToggle input:checked ~ #spanbox > span:nth-child(1) {
+    transform: rotate(-45deg) translate(1px, -3px);
+    background-color: black;
+    transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+    transition-delay: 0.5s;
+  }
+  #menuToggle input:checked ~ #spanbox > span:nth-child(3) {
+    transform: rotate(45deg) translate(-11px, -10px);
+    background-color: black;
+    transition: transform 0.7s cubic-bezier(.2,1,1,1.04);
+  }
+
+  #menuToggle input:hover {
+    transform: translateX(15px)
+  }
+
+  .socialMediaDesktop {
+    position: fixed;
+    top: 0;
+    left: 25px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+    z-index: 6;
+  }
+
+  .socialMediaDesktop ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    opacity: 0.5;
+  }
+
+  .socialMediaDesktop ul li:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .socialMediaDesktop ul li img {
+    height: 40px;
+  }
+
+  .index {
+    background-image: none;
+    overflow: hidden;
+  }
+
+  .index header {
+    left: 25px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+  }
+
+  .index .phone {
+    display: none;
+  }
+
+  .index .desktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: calc(100vh);
+    width: 100vw;
+  }
+
+  .index .desktop div {
+    width: 100%;
+    opacity: 0.85;
+    position: relative;
+  }
+
+  .index .desktop div:nth-of-type(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(/img/index-destkop1-min.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .index .desktop div:nth-of-type(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(/img/index-desktop2-min.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .index .desktop div:nth-of-type(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(/img/index-desktop3-min.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .index .desktop div:nth-of-type(4) {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(/img/index-desktop4-min.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .index .desktop div:hover {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.01)
+  }
+
+ .index .desktop div h2 {
+   position: absolute;
+   top: 50%;
+   right: 25px;
+   text-shadow: 0px 0px 5px black;
+   opacity: 0.9;
+   border-bottom: none;
+   text-align: right;
+   width: 80%;
+   }
+
+   .index .desktop div:hover > h2 {
+     opacity: 1;
+     transition: opacity 0.5s ease-in-out;
+   }
+
+  .index footer {
+    display: none;
+  }
+
+  .meetTheProductPhone {
+    display: block;
+  }
+
+  .meetTheProduct {
+    display: none;
+  }
+
+  .product .meetTheProductPhone .grid {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template: auto / 50% 50%;
+    height: 80vh;
+  }
+
+  #imgbox {
+    overflow: hidden;
+  }
+
+  .product .meetTheProductPhone .grid #imgbox img {
+    height: 100%;
+    width: auto;
+  }
+
+  .meetTheProductPhone .grid #text {
+    position: relative;
+  }
+
+  .meetTheProductPhone .grid #text #flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #flex > div {
+    max-width: 70%;
+    text-align: left;
+  }
+
+  #flex > div > h1 {
+    font-size: 5em;
+  }
+
+  #flex > div > h6 > a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .meetTheProductPhone .grid #text #flex h5 {
+    margin: 20px 0;
+  }
+
+  .meetTheProductPhone .grid #textChoice {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .meetTheProductPhone .grid #textChoice h6 {
+    display: inline-block;
+    margin: 0 15px;
+    opacity: 0.65;
+    border: 2px solid white;
+    padding: 13px 20px 10px 20px;
+    border-radius: 20px;
+  }
+
+  .meetTheProductPhone .grid #textChoice h6:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  .opacityExit {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .office {
+    background-color: black;
+    color: white;
+  }
+
+  .office header h1 {
+    color: white;
+  }
+
+  .office .socialMediaDesktop ul li img {
+    filter: brightness(0) invert(1);
+  }
+
+  .product article h2 {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .product article h3 {
+    padding: 10px 250px 10px 250px;
+    text-align: center;
+  }
+
+  .office article h2 {
+    text-align: left;
+  }
+
+  .office .meetTheProduct {
+    display: grid;
+    grid-template: auto / 60% 40%;
+  }
+
+  .single .meetTheProduct section {
+    padding: 30px;
+  }
+
+  .single .meetTheProduct .imgbox {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+  }
+
+  .single article section:nth-child(2) {
+    display:
+  }
+
+  .single article h2 {
+    margin-left: 0;
+  }
+
+  .single .meetTheProduct .imgbox {
+    order: 0;
+    height: 100%;
+  }
+
+  .single .meetTheProduct .imgbox img {
+    height: 100%;
+    margin: 0px 30px;
+  }
+  
+  .single article section:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+
+  .office article h3 {
+    padding: 0;
+    text-align: left;
+  }
+
+  .office article .imgbox {
+    display: block;
+    text-align: center;
+  }
+
+  .office footer {
+    background-color: white;
+    color: black;
+  }
+  .imgbox__img {
+    width: 100%;
+    display: inline-block;
+    margin: 0 30px 130px 30px;
+  }
+
+  .meetTheProduct > section > div:nth-child(1):hover img {
+    content: url(/img/vis2-min.jpg);
+  }
+
+  .meetTheProduct > section > div:nth-child(2):hover img {
+    content: url(/img/vis3-min.jpg);
+  }
+
+  .meetTheProduct > section > div:nth-child(3):hover img {
+    content: url(/img/Wnetrze_resto_1-min.jpg);
+  }
+
+  .imgbox__img {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imgbox__img img {
+    height: 400px;
+    width: 100%;
+  }
+
+
+  .imgbox__img #description {
+    width: 90%;
+    height: auto;
+    max-width: 1000px;
+  }
+
+  body > main > article.meetTheProduct > section > div:nth-child(1) {
+    text-align: left;
+  }
+
+  body > main > article.productsDownload > section {
+    display: flex;
+  }
+
+
+  .wizualizacje main {
+    padding-top: 110px;
+    max-width: 100vw;
+  }
+
+
+  .wizualizacje main article h2 {
+    text-align: center;
+    color: white;
+  }
+
+  .visualizationGalleryPhone {
+    display: none;
+  }
+
+  .visualizationGallery {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: initial;
+  }
+
+  .visualizationGallery #container {
+    display: flex;
+    position: relative;
+    margin: 0 20px;
+    width: 55vw;
+  }
+
+  .visualizationGallery #container #description {
+    position: absolute;
+    left: 50%;
+    width: 40%;
+    bottom: 20px;
+    background-color: rgb(248, 248, 248);
+    padding: 10px 0px;
+    transform: translateX(-50%);
+    text-align: center;
+    box-shadow: 1px 1px 5px #ab7440;
+  }
+
+  .visualizationGallery div {
+    padding: 0;
+    margin: 0;
+  }
+
+  .visualizationGallery div img {
+    width: 55vw;
+    height: 70vh;
+    margin-bottom: 0;
+  }
+
+  .phone-img1,
+  .phone-img2 {
+    display: none;
+  }
+
+  .doYouWantMore p {
+    width: 30%;
+  }
+
+  .doYouWantMore p:hover {
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+  }
+
+  .productionProcess h2 {
+    padding: 120px 0px 40px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .proces section {
+    height: auto;
+    display: block;
+    position: relative;
+    margin: 70px 0;
+  }
+
+  .proces section .divbox,
+  .proces section:nth-of-type(2n) div {
+    text-align: center;
+    width: 30vw;
+  }
+
+  .proces section img {
+    width: 100vw;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .proces section:nth-of-type(2n){
+    text-align: right
+  }
+
+  .proces section:nth-of-type(n) img {
+    right: 40%;
+  }
+
+  .proces section:nth-of-type(2n) img {
+    right: 60%;
+  }
+
+  .proces section .divbox {
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .proces section .divbox div {
+    padding: 30px 15px;
+  }
+
+  .productionProcess section:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .goToPrice {
+    border-left: none;
+  }
+
+  .goToPrice section h1, .goToPrice section h5 {
+    text-align: center;
+  }
+
+  .goToPrice section h1:hover {
+    color: #865b33;
+    transition: color 0.1s ease-in-out;
+  }
+
+  .product main {
+    margin: auto;
+  }
+
+  .wycena main,
+  .kontakt main,
+  .faq main {
+    margin: auto;
+    max-width: 900px;
+    padding-top: 130px;
+  }
+
+  .wycena main h2, .wycena main h5 {
+    text-align: center;
+  }
+
+  .wycena main > article > section:nth-child(1) {
+    text-align: center;
+  }
+
+  .wycena main > article > section:nth-child(1) h2 {
+    margin-bottom: 20px;
+  }
+
+  .wycena main section h2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+  }
+
+  .wycena main section h5 {
+    grid-column: 1/ 2;
+    grid-row: 2 / 2;
+  }
+
+  .wycena form {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    padding-top: 40px;
+  }
+  .wycena .links img {
+    display: none;
+  }
+
+  body > main > article > section.links > h1 > a {
+    font-size: 0.6em;
+  }
+
+  .wycena .box {
+    margin: 0 0;
+  }
+
+  .wycena .box span {
+    width: 1.3%;
+    margin: 0 3.5px;
+  }
+
+  .wycena .links h1 {
+    border-left: none;
+    display: block;
+    text-align: center;
+  }
+
+  .wycena .links h1:hover {
+    color: #966231;
+    transition: color 0.1s ease-in-out;
+  }
+
+  .wycena .links h5 {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+  }
+
+  .wycena #result-text,
+  .wycena #result {
+    text-align: center;
+  }
+
+  .kontakt h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .kontakt section:nth-of-type(1) input, .kontakt section:nth-of-type(1) textarea {
+    width: 60%;
+    margin: 30px auto;
+  }
+
+  .kontakt .socialmedia {
+    text-align: center;
+  }
+
+
+
+  .kontakt .socialmedia h3 {
+    border-left: none;
+  }
+
+  .kontakt .socialmedia img {
+    height: 45px;
+    margin: 20px 40px;
+    opacity: 0.8;
+  }
+
+  .kontakt .socialmedia img:hover {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+  }
+
+  #message {
+    resize: none;
+    width: 60% !important;
+   }
+ 
+
+input[type=submit] {
+  display: block;
+  height: auto;
+  width: 30% !important;
+  background-color: #a87e54 !important;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+  left: 0;
+  transform: none;
+  position: relative;
+}
+
+  .faq main h2 {
+    text-align: center
+  }
+
+  .faq .faqSection {
+    text-align: left;
+    margin: 30px 0;
+  }
+
+  .faq main input:checked ~ p {
+    margin: 20px 0;
+    margin-left: 30px;
+  }
+
+  .faq main article section h3 {
+    margin-left: 15px;
+  }
+
+  footer {
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  footer nav {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  footer div:nth-of-type(1) ul {
+    columns: 2;
+    column-fill: auto;
+  }  
+
+  footer nav div {
+    width: auto;
+    margin-right: 50px;
+  }
+
+  .animate-in {
+    -webkit-animation: fadeIn 1.5s ease-in;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.animate-out {
+    -webkit-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+}

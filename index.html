@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>LetsDesign</title>
+</head>
+<body class="index animate-in">
+  <header class="slide-in-top">
+    <h1><a href="index.html">Lets<span>Design</span></a></h1>
+  </header>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox"/>
+      <div id="spanbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu">
+        <div class="menuFlex">
+          <div>
+            <a href="/product.html"><li id="menu-product">PRODUKT</li></a>
+            <a href="/wizualizacje.html"><li id="menu-vis">WIZUALIZACJE</li></a>
+            <a href="/proces.html"><li id="menu-process">PROCES</li></a>
+            <a href="/wycena.html"><li id="menu-cost">WYCENA</li></a>
+            <a href="/kontakt.html"><li id="menu-contact">KONTAKT</li></a>
+            <a href="/faq.html"><li id="menu-faq">FAQ</li></a>
+            <a href="https://www.facebook.com/Letsdsgn-105755334652116/]"><li><img src="img/facebook.png"></li></a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fletsdgn%3Figshid%3D1mue84awtuo7f%26fbclid%3DIwAR3BsTuqWGk3_ZLo44hnUTGf4Z0LctJ3ASWvRQWtOypO8oKyuIO1YxFHFzo&h=AT00cpNVsur8K-fJseKyrrLp_SSxNX8XdId04UDvhinKMPOWs3UZ2RCSBApuqT0T_3welvQhwiKA5x8-R4JUhoXXR1E8gIrd1l5wJ_mWUl_BXUv5HpIOHDZm9tjW56sftz7ddQ"><li><img src="img/instagram.png"></li></a>
+            <a href="/kontakt.html"><li><img src="img/gmail.png"></li></a>
+         </div>
+        </div>
+        <div>
+          <img src="img/office-min.jpg" id="menu-img">
+        </div>
+      </ul>
+   </div>
+  </nav>
+  <main class="desktop"> 
+    <div>
+      <a href="product.html">
+        <h2>POZNAJ NASZ INNOWACYJNY PRODUKT</h2>
+      </a>
+    </div>
+    <div>
+      <a href="wizualizacje.html"> 
+        <h2>ZOBACZ NASZE WIZUALIZACJE</h2>
+      </a>
+    </div>
+    <div>
+      <a href="proces.html">
+        <h2>DOWIEDZ SIĘ, JAK TWORZYMY DESIGN PRZYSZŁOŚCI</h2>
+      </a>
+    </div>
+    <div>
+      <a href="wycena.html">
+        <h2>WYCEŃ SWOJE ZAMÓWIENIE</h2>
+      </a>
+    </div>
+  </main>
+  <footer class="slide-in-bottom">
+    <nav>
+      <div>
+        <p><a href="/product.html">POZNAJ NASZ PRODUKT</a></p>
+      </div>
+      <div>
+        <p><a href="/kontakt.html">SKONTAKTUJ SIĘ Z NAMI</a></p>
+      </div>
+    </nav>
+  </footer>
+  <script>
+    const menuItem = document.querySelectorAll('.menuFlex div a li');
+    const menuImg = document.getElementById('menu-img');
+
+    menuItem[0].onmouseenter = function (){
+      menuImg.src = "img/vis2-min.jpg";
+    } 
+
+    menuItem[1].onmouseenter = function (){
+      menuImg.src = "img/index-destkop1-min.jpg";
+    }
+
+    menuItem[2].onmouseenter = function (){
+      menuImg.src = "img/index-desktop3-min.jpg";
+    }
+
+    menuItem[3].onmouseenter= function (){
+      menuImg.src = "img/index-desktop4-min.jpg";
+    }
+
+    menuItem[4].onmouseenter= function (){
+      menuImg.src = "img/kontakt.jpg";
+    }
+
+    menuItem[5].onmouseenter= function (){
+      menuImg.src = "img/lamp-2-2.jpg";
+    }
+
+    window.addEventListener("beforeunload", function () {
+  document.body.classList.add("animate-out");
+});
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

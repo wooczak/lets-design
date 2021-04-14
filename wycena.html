@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Wycena produktu</title>
+</head>
+<body class="wycena animate-in"> 
+  <header class="header slide-in-top">
+    <h1><a href="index.html">Lets<span>Design</span></a></h1>
+  </header>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox"/>
+      <div id="spanbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu">
+        <div class="menuFlex">
+          <div>
+            <a href="/product.html"><li>PRODUKT</li></a>
+            <a href="/wizualizacje.html"><li>WIZUALIZACJE</li></a>
+            <a href="/proces.html"><li>PROCES</li></a>
+            <a href="/wycena.html"><li>WYCENA</li></a>
+            <a href="/kontakt.html"><li>KONTAKT</li></a>
+            <a href="/faq.html"><li>FAQ</li></a>
+            <a href="https://www.facebook.com/Letsdsgn-105755334652116/]"><li><img src="img/facebook.png"></li></a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fletsdgn%3Figshid%3D1mue84awtuo7f%26fbclid%3DIwAR3BsTuqWGk3_ZLo44hnUTGf4Z0LctJ3ASWvRQWtOypO8oKyuIO1YxFHFzo&h=AT00cpNVsur8K-fJseKyrrLp_SSxNX8XdId04UDvhinKMPOWs3UZ2RCSBApuqT0T_3welvQhwiKA5x8-R4JUhoXXR1E8gIrd1l5wJ_mWUl_BXUv5HpIOHDZm9tjW56sftz7ddQ"><li><img src="img/instagram.png"></li></a>
+            <a href="/kontakt.html"><li><img src="img/gmail.png"></li></a>
+          </div>
+        </div>
+        <div>
+          <img src="img/office-min.jpg" id="menu-img">
+        </div>
+      </ul>
+   </div>
+   <div class="socialMediaDesktop">
+    <ul>
+      <li><a href="https://www.facebook.com/Letsdsgn-105755334652116/]"><img src="img/facebook.png"></a></li>
+      <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fletsdgn%3Figshid%3D1mue84awtuo7f%26fbclid%3DIwAR3BsTuqWGk3_ZLo44hnUTGf4Z0LctJ3ASWvRQWtOypO8oKyuIO1YxFHFzo&h=AT00cpNVsur8K-fJseKyrrLp_SSxNX8XdId04UDvhinKMPOWs3UZ2RCSBApuqT0T_3welvQhwiKA5x8-R4JUhoXXR1E8gIrd1l5wJ_mWUl_BXUv5HpIOHDZm9tjW56sftz7ddQ"><img src="img/instagram.png"></a></li>
+      <li><a href="/kontakt.html"><img src="img/gmail.png"></a></li>
+    </ul>
+  </div>
+  </nav>
+  <main>
+    <article>
+      <section>
+        <h2>Wyceń swój produkt</h2>
+        
+        <form>
+          <h3>Wysokość produktu [cm]</h3>
+          <div class="container">
+            <div class="box heightValue">
+              <span id="50"></span>
+              <span id="60"></span>
+              <span id="70"></span>
+              <span id="80"></span>
+              <span id="90"></span>
+              <span id="100"></span>
+              <span id="110"></span>
+              <span id="120"></span>
+              <span id="130"></span>
+              <span id="140"></span>
+              <span id="150"></span>
+              <span id="160"></span>
+              <span id="170"></span>
+              <span id="180"></span>
+              <span id="190"></span>
+              <span id="200"></span>
+              <span id="210"></span>
+              <span id="220"></span>
+              <span id="230"></span>
+              <span id="240"></span>
+              <span id="250"></span>
+            </div>
+        </div>
+        <h3>Szerokość produktu [cm]</h3>
+        <div class="container">
+          <div class="box widthValue">
+            <span id="50"></span>
+            <span id="60"></span>
+            <span id="70"></span>
+            <span id="80"></span>
+            <span id="90"></span>
+            <span id="100"></span>
+            <span id="110"></span>
+            <span id="120"></span>
+            <span id="130"></span>
+            <span id="140"></span>
+            <span id="150"></span>
+            <span id="160"></span>
+            <span id="170"></span>
+            <span id="180"></span>
+            <span id="190"></span>
+            <span id="200"></span>
+            <span id="210"></span>
+            <span id="220"></span>
+            <span id="230"></span>
+            <span id="240"></span>
+            <span id="250"></span>
+          </div>
+        </div>
+        </form>
+          <h4 id="result-text">Twój produkt będzie kosztować ok.</h4><h1 id="result"></h1>
+          <h5>Nasz prosty kalkulator pozwoli Ci oszacować, ile kosztowałaby produkcja naszego produktu. Pamiętaj, ze podana cena jest tylko szacunkiem i wszystko zalezy od pozostałych zmiennych indywidualnego zamówienia. Aby dowiedzieć się o dokładnej wycenie, skontaktuj się z nami, klikając w ten <span style="font-weight: 700"><a href="/kontakt.html">link</a></span>.</h5>
+      </section>
+      <section class="links">
+        <img src="img/contactus-min.jpg">
+        <h1><a href="proces.html">KLIKNIJ TUTAJ</a></h1>
+        <h5>aby dowiedzieć się więcej <span>o produkcie</span> oraz zmiennych, od których zalezy jego cena.</h5>
+        <img src="img/gettoknow-product-min.jpg">
+        <h1><a href="kontakt.html">KLIKNIJ TUTAJ</a></h1>
+        <h5>jezeli chciałbyś poznać wycenę <span>niestandardowych wymiarów</span>  naszego produktu, których nie mozesz wycenić przez nasz kalkulator.</h5>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <nav>
+      <div>
+        <h6 style="margin-bottom: 10px"><strong>LETS.DSGN</strong></h6>
+        <ul>
+          <li><a href="/index.html"><h6>Strona główna</h6></a></li>
+          <li><a href="/product.html"><h6>Produkt</h6></a></li>
+          <li><a href="/wizualizacje.html"><h6>Wizualizacje</h6></a></li>
+          <li><a href="/proces.html"><h6>Proces</h6></a></li>
+          <li><a href="/wycena.html"><h6>Wycena</h6></a></li>
+          <li><a href="/kontakt.html"><h6>Kontakt</h6></a></li>
+          <li><a href="/faq.html"><h6>FAQ</h6></a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 style="margin-bottom: 10px;"><strong>SOCIAL MEDIA</strong></h6>
+        <ul>
+          <li><a href="https://www.facebook.com/Letsdsgn-105755334652116/]"><h6>Facebook</h6></a></li>
+          <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fletsdgn%3Figshid%3D1mue84awtuo7f%26fbclid%3DIwAR3BsTuqWGk3_ZLo44hnUTGf4Z0LctJ3ASWvRQWtOypO8oKyuIO1YxFHFzo&h=AT00cpNVsur8K-fJseKyrrLp_SSxNX8XdId04UDvhinKMPOWs3UZ2RCSBApuqT0T_3welvQhwiKA5x8-R4JUhoXXR1E8gIrd1l5wJ_mWUl_BXUv5HpIOHDZm9tjW56sftz7ddQ"><h6>Instagram</h6></a></li>
+          <li><a href="/kontakt.html"><h6>E-mail</h6></a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+  
+       //>=, not <=
+      if (scroll >= 30) {
+          //clearHeader, not clearheader - caps H
+          $(".header").addClass("color");
+      }
+      else {
+        $(".header").removeClass("color")
+      }
+  }); //missing );
+  </script>
+   <script>
+    const menuItem = document.querySelectorAll('.menuFlex div a li');
+    const menuImg = document.getElementById('menu-img');
+
+    menuItem[0].onmouseenter = function (){
+      menuImg.src = "img/vis2-min.jpg";
+    } 
+
+    menuItem[1].onmouseenter = function (){
+      menuImg.src = "img/index-destkop1-min.jpg";
+    }
+
+    menuItem[2].onmouseenter = function (){
+      menuImg.src = "img/index-desktop3-min.jpg";
+    }
+
+    menuItem[3].onmouseenter= function (){
+      menuImg.src = "img/index-desktop4-min.jpg";
+    }
+
+    menuItem[4].onmouseenter= function (){
+      menuImg.src = "img/kontakt.jpg";
+    }
+
+    menuItem[5].onmouseenter= function (){
+      menuImg.src = "img/lamp-2-2.jpg";
+    }
+
+
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script>
+    // Selectors
+const spanObject = document.querySelectorAll('.box span');
+const spanObjectHeight = document.querySelectorAll('.heightValue span');
+const spanObjectWidth = document.querySelectorAll('.widthValue span');
+const form = document.querySelector("body > main > article > section:nth-child(1) > form")
+const container = document.querySelector('.container');
+const divBox1 = document.querySelector("body > main > article > section:nth-child(1) > form > div:nth-child(2) > div")
+const divBox2 = document.querySelector("body > main > article > section:nth-child(1) > form > div:nth-child(4) > div");
+const divObject = document.createElement('div');
+const resultText = document.querySelector("#result-text");
+
+spanObject.forEach(function(elem) {
+  elem.addEventListener('mouseover', function(event) {
+    this.style.transform = "scaleY(1.5)";
+    this.style.transition = "all 0.2s";
+    divBox1.appendChild(divObject);
+    divBox2.appendChild(divObject);
+    divObject.innerHTML = `${this.id}`;
+    divObject.style.position = "absolute";
+    divObject.style.top = this.offsetTop - 25 + "px" ;
+    divObject.style.left = this.offsetLeft - 5 + "px";
+  });
+  elem.addEventListener('mouseleave', function() {
+    this.style.transform = "scaleY(1)"
+  })
+});
+
+let count = 0;
+
+spanObjectHeight.forEach(function (elem) {
+  elem.addEventListener('click', function(e) {
+    count += 1
+    if (count === 1) {
+      this.style.backgroundColor = "#ab7440";
+      this.parentElement.classList.add("red");
+      this.classList.add("redspan");
+      $('.heightValue > span:not(.redspan)').css("pointer-events","none");
+    }
+    if (count === 2) {
+      this.style.backgroundColor = "black";
+      this.parentElement.classList.remove("red");
+      this.classList.remove("redspan");
+      count = 0;
+      $('.heightValue > span:not(.redspan)').css("pointer-events","auto");
+    }
+  });
+
+  spanObjectWidth.forEach(function (elem) {
+  elem.addEventListener('click', function(e) {
+    count += 1
+    if (count === 1) {
+      this.style.backgroundColor = "#ab7440";
+      this.parentElement.classList.add("red");
+      this.classList.add("redspan");
+      $('.widthValue > span:not(.redspan)').css("pointer-events","none");
+    }
+    if (count === 2) {
+      this.style.backgroundColor = "black";
+      this.parentElement.classList.remove("red");
+      this.classList.remove("redspan");
+      count = 0;
+      $('.widthValue > span:not(.redspan)').css("pointer-events","auto");
+    }
+  });
+});
+
+  form.addEventListener('click', function(e) {
+   if (divBox1.classList.contains("red") && divBox2.classList.contains("red")) {
+    const divBoxRed1 = document.querySelector('.heightValue .redspan');
+    const divBoxRed2 = document.querySelector('.widthValue .redspan');
+
+    const divBoxRed1Value = new Number(divBoxRed1.id);
+    const divBoxRed2Value = new Number(divBoxRed2.id);
+
+    const resultValue = (divBoxRed1Value * divBoxRed2Value * 150 / 250 * 0.23).toFixed(0);
+
+    resultText.innerHTML = `Twój produkt (o wymiarach ${divBoxRed1Value} x ${divBoxRed2Value} cm) będzie kosztować ok. ${resultValue}zł`;
+  } else {
+    resultText.innerHTML = `Twój produkt będzie kosztować ok.`;
+  }
+});
+});
+    
+  
+  </script>
+</body>
+</html>
